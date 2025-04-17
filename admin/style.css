@@ -1,0 +1,285 @@
+/* === Stile Generale Admin === */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Sfondo leggermente grigio */
+    color: #343a40; /* Testo scuro */
+    line-height: 1.6;
+}
+
+/* === Header Admin === */
+.admin-header {
+    background-color: #343a40; /* Grigio scuro */
+    padding: 15px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.admin-header nav {
+    display: flex;
+    align-items: center;
+}
+
+.admin-header nav span {
+    margin-right: 20px;
+    color: #ced4da; /* Grigio chiaro per il benvenuto */
+    font-size: 0.9em;
+}
+
+
+.admin-header nav a {
+    color: #adb5bd; /* Grigio medio per i link */
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 0;
+    transition: color 0.2s ease;
+}
+
+.admin-header nav a:hover {
+    color: white;
+}
+
+/* === Contenitore Principale Admin === */
+.admin-container {
+    padding: 30px;
+    max-width: 1100px; /* Larghezza massima per leggibilità */
+    margin: 30px auto; /* Centra il contenitore */
+    background-color: #ffffff; /* Sfondo bianco */
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* === Titoli Pagina e Sezioni === */
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.page-title h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #495057; /* Grigio scuro */
+}
+
+/* === Tabelle === */
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto; /* Scroll orizzontale per tabelle larghe su mobile */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dee2e6; /* Bordi più leggeri */
+    vertical-align: middle; /* Allinea verticalmente */
+}
+
+th {
+    background-color: #e9ecef; /* Sfondo leggermente grigio per header tabella */
+    font-weight: 600; /* Leggermente più bold */
+    color: #495057;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa; /* Righe alternate */
+}
+
+tr:hover {
+    background-color: #e2e6ea; /* Hover più evidente */
+}
+
+/* === Bottoni e Link Azione === */
+/* Stile base comune per tutti i link/bottoni azione */
+.actions a {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 5px; /* Spazio se vanno a capo */
+    padding: 5px 8px;
+    font-size: 0.9em;
+    text-decoration: none;
+    border-radius: 3px;
+    color: white !important; /* Forza bianco, tranne dove sovrascritto */
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    vertical-align: middle;
+}
+
+.actions a:hover {
+    opacity: 0.85;
+}
+
+/* Colori specifici per azione */
+.actions .view-exam { background-color: #007bff; } /* Blu */
+.actions .duplicate-exam { background-color: #ffc107; color: #333 !important; } /* Giallo (testo scuro!) */
+.actions .edit-exam { background-color: #fd7e14; } /* Arancione per modifica */
+.actions .delete-exam { background-color: #dc3545; } /* Rosso */
+.actions .delete-patient { background-color: var(--danger-color); } /* << AGGIUNGI QUESTA RIGA (Rosso per elimina paziente) */
+
+/* Stili per bottoni più grandi fuori dalle tabelle (come Nuovo Paziente) */
+.admin-button, .add-button, .back-button {
+     /* ... stili come definiti prima ... */
+    display: inline-block;
+    padding: 8px 14px; /* Padding leggermente maggiore */
+    font-size: 0.9em;
+    text-decoration: none;
+    border-radius: 4px;
+    color: white !important;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+}
+ .admin-button:hover, .add-button:hover, .back-button:hover { opacity: 0.85; }
+ .admin-button { background-color: #007bff; }
+ .add-button { background-color: #28a745; }
+ .back-button { background-color: #6c757d; }
+
+/* === Form === */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.form-actions button[type="submit"] {
+     padding: 10px 20px;
+     background-color: #28a745;
+     color: white;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 1em;
+}
+.form-actions button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.form-actions a { /* Link Annulla */
+    margin-left: 15px;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+.form-actions a:hover {
+    text-decoration: underline;
+}
+
+
+/* === Messaggi === */
+.error, .error-message {
+    color: #721c24; /* Rosso scuro */
+    background-color: #f8d7da; /* Rosso chiaro */
+    border: 1px solid #f5c6cb;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+.success-message {
+     color: #155724;
+     background-color: #d4edda;
+     border: 1px solid #c3e6cb;
+     padding: 10px 15px;
+     border-radius: 4px;
+     margin-bottom: 20px;
+     font-size: 0.9em;
+}
+.logout-success {
+     color: #004085;
+     background-color: #cce5ff;
+     border: 1px solid #b8daff;
+      padding: 10px 15px;
+     border-radius: 4px;
+     margin-bottom: 20px;
+     font-size: 0.9em;
+}
+
+/* === Varie === */
+.no-data { /* Per messaggi "Nessun paziente", "Nessun esame" */
+    text-align: center;
+    color: #6c757d;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Stili Responsive (Base) */
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .admin-header nav {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .admin-header nav a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .page-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .page-title a.add-button {
+        margin-top: 15px;
+    }
+    th, td {
+        font-size: 0.9em; /* Riduci testo nelle tabelle */
+        padding: 8px 10px;
+    }
+    .actions a {
+        margin-bottom: 5px; /* Spazio tra bottoni azione su mobile */
+    }
+    .admin-container {
+        padding: 20px;
+    }
+}
