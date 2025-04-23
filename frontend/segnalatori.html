@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Segnalatori</title>
+	
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+	
+    <script src="../assets/js/loadHeader.js" defer></script>
+    <script src="../assets/js/segnalatori.js" defer></script>
+</head>
+<body>
+    <div id="header"></div>
+    <h1><i class="fas fa-user-friends"></i> Gestione Segnalatori</h1>
+    <form id="segnalatoreForm">
+        <input type="text" id="nomeSegnalatore" placeholder="Nome Segnalatore" required>
+        <button type="submit">Aggiungi Segnalatore</button>
+    </form>
+    <h2>Elenco Segnalatori</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody id="segnalatoreTable"></tbody>
+    </table>
+</body>
+</html>
